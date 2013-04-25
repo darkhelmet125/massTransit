@@ -9,5 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface StopNameAndStopTime : NSObject
-
+@property NSString* stop_name;
+@property NSString* stop_time;
+-(id)initWithStopName:(NSString*)stopName andStopTime:(NSString*)stopTime;
 @end

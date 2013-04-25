@@ -8,15 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import <sqlite3.h>
-#import "Location.h"
+#import "Route.h"
+#import "Trip.h"
+#import "StopNameAndStopTime.h"
 
-@interface CitiesDatabase : NSObject
+@interface MetrolinkDatabase : NSObject
 {
   sqlite3* _databaseConnection;
 }
 
-+ (CitiesDatabase*) database;
-- (NSArray*) californiaLocations;
-- (NSArray*) allLocations;
++ (MetrolinkDatabase*) database;
+- (NSArray*) allRoutes;
+- (NSArray*) stopsForRoute:(NSString*) routeID;
 
 @end

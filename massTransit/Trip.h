@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface Trip : NSObject
-
+@property NSNumber* tripID;
+-(id)initWithTripID:(NSNumber*)trip;
 @end

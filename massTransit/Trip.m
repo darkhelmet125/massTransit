@@ -9,5 +9,12 @@
 #import "Trip.h"
 
 @implementation Trip
-
+@synthesize tripID;
+-(id)initWithTripID:(NSNumber*)trip
+{
+    self = [super init];
+    if(self)
+        tripID = trip;
+    return self;
+}
 @end

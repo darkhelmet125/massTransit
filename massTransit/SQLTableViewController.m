@@ -7,7 +7,7 @@
 //
 
 #import "SQLTableViewController.h"
-#import "MSDetailViewController.h"
+#import "StopsTableViewController.h"
 
 @interface SQLTableViewController ()
 
@@ -15,69 +15,69 @@
 
 @implementation SQLTableViewController
 
-@synthesize locations = _locations;
+@synthesize routes;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
-  self = [super initWithStyle:style];
-  if (self) {
-    // Custom initialization
-  }
-  return self;
+    self = [super initWithStyle:style];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
 }
 
 - (void)viewDidLoad
 {
-  [super viewDidLoad];
-  
-  // Uncomment the following line to preserve selection between presentations.
-  // self.clearsSelectionOnViewWillAppear = NO;
-  
-  // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-  // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-  self.locations = [[CitiesDatabase database] californiaLocations];
+    [super viewDidLoad];
+    
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.routes = [[MetrolinkDatabase database] allRoutes];
 }
 
 - (void)didReceiveMemoryWarning
 {
-  [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
-  self.locations = nil;
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+    self.routes = nil;
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-  //#warning Potentially incomplete method implementation.
-  // Return the number of sections.
-  return 1;
+    //#warning Potentially incomplete method implementation.
+    // Return the number of sections.
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-  //#warning Incomplete method implementation.
-  // Return the number of rows in the section.
-  return [self.locations count];
+    //#warning Incomplete method implementation.
+    // Return the number of rows in the section.
+    return [self.routes count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  //static NSString *CellIdentifier = @"Cell";
-  static NSString *MyIdentifier = @"MyCellIdentifier";
-  //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier forIndexPath:indexPath];
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
-  
-  // Configure the cell...
-  if (cell == nil) {
+    //static NSString *CellIdentifier = @"Cell";
+    static NSString *MyIdentifier = @"MyCellIdentifier";
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
+    
+    // Configure the cell...
+    if (cell == nil) {
 		// Use the default cell style.
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:MyIdentifier];
-  }
-  
-  Location *location = [self.locations objectAtIndex: indexPath.row];
-  cell.textLabel.text = location.accentCity;
-  cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ (%g, %g)", location.region, location.coord.longitude, location.coord.latitude];
-  return cell;
+		//cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:MyIdentifier];
+    }
+    
+    Route *route = [self.routes objectAtIndex: indexPath.row];
+    cell.textLabel.text = route.route_long_name;
+    //cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ (%g, %g)", route.route_id, route.coord.longitude, route.coord.latitude];
+    return cell;
 }
 
 /*
@@ -123,26 +123,30 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  NSLog(@"Tap!");
-  //[self performSegueWithIdentifier:@"detailsegue" sender:self];
-  // Navigation logic may go here. Create and push another view controller.
-  /*
-   <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-   // ...
-   // Pass the selected object to the new view controller.
-   [self.navigationController pushViewController:detailViewController animated:YES];
-   */
+    NSLog(@"Tap!");
+    //[self performSegueWithIdentifier:@"detailsegue" sender:self];
+    // Navigation logic may go here. Create and push another view controller.
+    /*
+     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+     // ...
+     // Pass the selected object to the new view controller.
+     [self.navigationController pushViewController:detailViewController animated:YES];
+     */
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-  NSLog(@"prepareForSegue: %@", segue.identifier);
-
-  if ([segue.identifier isEqualToString:@"detailsegue"]){
-    MSDetailViewController* detailVC = segue.destinationViewController;
-    NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
-    detailVC.location = [self.locations objectAtIndex:selectedRowIndex.row];
-  }
+    NSIndexPath* indexPath;
+    Route *route = [self.routes objectAtIndex: indexPath.row];
+    NSLog(@"prepareForSegue: %@", segue.identifier);
+    if ([segue.identifier isEqualToString:@"stopSegue"])
+    {
+        StopsTableViewController* detailVC = segue.destinationViewController;
+        NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
+        detailVC.stops = [self.routes objectAtIndex:selectedRowIndex.row];
+        detailVC.routeID = route.route_id;
+        NSLog(@"%@",detailVC.routeID);
+    }
 }
 
 

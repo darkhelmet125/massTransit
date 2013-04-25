@@ -18,12 +18,21 @@
 		3D3D21FE17274C180033CD43 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D3D21FD17274C180033CD43 /* Default-568h@2x.png */; };
 		3D3D220117274C180033CD43 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D3D21FF17274C180033CD43 /* MainStoryboard_iPhone.storyboard */; };
 		3D3D220417274C180033CD43 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D3D220217274C180033CD43 /* MainStoryboard_iPad.storyboard */; };
-		3D3D220717274C180033CD43 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D220617274C180033CD43 /* ViewController.m */; };
 		3D3D220F17274C190033CD43 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D3D220E17274C190033CD43 /* SenTestingKit.framework */; };
 		3D3D221017274C190033CD43 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D3D21E717274C180033CD43 /* UIKit.framework */; };
 		3D3D221117274C190033CD43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D3D21E917274C180033CD43 /* Foundation.framework */; };
 		3D3D221917274C190033CD43 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D3D221717274C190033CD43 /* InfoPlist.strings */; };
 		3D3D221C17274C190033CD43 /* massTransitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D221B17274C190033CD43 /* massTransitTests.m */; };
+		3D3D222617274CD10033CD43 /* metrolink.sl3 in Resources */ = {isa = PBXBuildFile; fileRef = 3D3D222517274CD10033CD43 /* metrolink.sl3 */; };
+		3D3D222717274CD10033CD43 /* metrolink.sl3 in Resources */ = {isa = PBXBuildFile; fileRef = 3D3D222517274CD10033CD43 /* metrolink.sl3 */; };
+		3D3D222A17274CFB0033CD43 /* MetrolinkDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D222917274CFB0033CD43 /* MetrolinkDatabase.m */; };
+		3D3D222E17274D710033CD43 /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D222D17274D710033CD43 /* Route.m */; };
+		3D3D222F17274D710033CD43 /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D222D17274D710033CD43 /* Route.m */; };
+		3D3D2232172750260033CD43 /* SQLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D2231172750260033CD43 /* SQLTableViewController.m */; };
+		3D3D2235172752E50033CD43 /* StopsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D2234172752E50033CD43 /* StopsTableViewController.m */; };
+		3D3D22381727555B0033CD43 /* Trip.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D22371727555B0033CD43 /* Trip.m */; };
+		3D3D223B172759810033CD43 /* StopNameAndStopTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D223A172759810033CD43 /* StopNameAndStopTime.m */; };
+		3D3D223D17275FEF0033CD43 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D3D223C17275FEF0033CD43 /* libsqlite3.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,14 +61,26 @@
 		3D3D21FD17274C180033CD43 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3D3D220017274C180033CD43 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		3D3D220317274C180033CD43 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		3D3D220517274C180033CD43 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3D3D220617274C180033CD43 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3D3D220D17274C190033CD43 /* massTransitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = massTransitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D3D220E17274C190033CD43 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		3D3D221617274C190033CD43 /* massTransitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "massTransitTests-Info.plist"; sourceTree = "<group>"; };
 		3D3D221817274C190033CD43 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3D3D221A17274C190033CD43 /* massTransitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = massTransitTests.h; sourceTree = "<group>"; };
 		3D3D221B17274C190033CD43 /* massTransitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = massTransitTests.m; sourceTree = "<group>"; };
+		3D3D222517274CD10033CD43 /* metrolink.sl3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = metrolink.sl3; sourceTree = "<group>"; };
+		3D3D222817274CFB0033CD43 /* MetrolinkDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetrolinkDatabase.h; sourceTree = "<group>"; };
+		3D3D222917274CFB0033CD43 /* MetrolinkDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetrolinkDatabase.m; sourceTree = "<group>"; };
+		3D3D222C17274D710033CD43 /* Route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Route.h; sourceTree = "<group>"; };
+		3D3D222D17274D710033CD43 /* Route.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Route.m; sourceTree = "<group>"; };
+		3D3D2230172750260033CD43 /* SQLTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLTableViewController.h; sourceTree = "<group>"; };
+		3D3D2231172750260033CD43 /* SQLTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLTableViewController.m; sourceTree = "<group>"; };
+		3D3D2233172752E50033CD43 /* StopsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopsTableViewController.h; sourceTree = "<group>"; };
+		3D3D2234172752E50033CD43 /* StopsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopsTableViewController.m; sourceTree = "<group>"; };
+		3D3D22361727555B0033CD43 /* Trip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trip.h; sourceTree = "<group>"; };
+		3D3D22371727555B0033CD43 /* Trip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trip.m; sourceTree = "<group>"; };
+		3D3D2239172759810033CD43 /* StopNameAndStopTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopNameAndStopTime.h; sourceTree = "<group>"; };
+		3D3D223A172759810033CD43 /* StopNameAndStopTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopNameAndStopTime.m; sourceTree = "<group>"; };
+		3D3D223C17275FEF0033CD43 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D3D223D17275FEF0033CD43 /* libsqlite3.0.dylib in Frameworks */,
 				3D3D21E817274C180033CD43 /* UIKit.framework in Frameworks */,
 				3D3D21EA17274C180033CD43 /* Foundation.framework in Frameworks */,
 				3D3D21EC17274C180033CD43 /* CoreGraphics.framework in Frameworks */,
@@ -89,6 +111,7 @@
 		3D3D21DB17274C180033CD43 = {
 			isa = PBXGroup;
 			children = (
+				3D3D223C17275FEF0033CD43 /* libsqlite3.0.dylib */,
 				3D3D21ED17274C180033CD43 /* massTransit */,
 				3D3D221417274C190033CD43 /* massTransitTests */,
 				3D3D21E617274C180033CD43 /* Frameworks */,
@@ -123,8 +146,18 @@
 				3D3D21F717274C180033CD43 /* AppDelegate.m */,
 				3D3D21FF17274C180033CD43 /* MainStoryboard_iPhone.storyboard */,
 				3D3D220217274C180033CD43 /* MainStoryboard_iPad.storyboard */,
-				3D3D220517274C180033CD43 /* ViewController.h */,
-				3D3D220617274C180033CD43 /* ViewController.m */,
+				3D3D2230172750260033CD43 /* SQLTableViewController.h */,
+				3D3D2231172750260033CD43 /* SQLTableViewController.m */,
+				3D3D2233172752E50033CD43 /* StopsTableViewController.h */,
+				3D3D2234172752E50033CD43 /* StopsTableViewController.m */,
+				3D3D222817274CFB0033CD43 /* MetrolinkDatabase.h */,
+				3D3D222917274CFB0033CD43 /* MetrolinkDatabase.m */,
+				3D3D222C17274D710033CD43 /* Route.h */,
+				3D3D222D17274D710033CD43 /* Route.m */,
+				3D3D22361727555B0033CD43 /* Trip.h */,
+				3D3D22371727555B0033CD43 /* Trip.m */,
+				3D3D2239172759810033CD43 /* StopNameAndStopTime.h */,
+				3D3D223A172759810033CD43 /* StopNameAndStopTime.m */,
 				3D3D21EE17274C180033CD43 /* Supporting Files */,
 			);
 			path = massTransit;
@@ -134,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				3D3D21EF17274C180033CD43 /* massTransit-Info.plist */,
+				3D3D222517274CD10033CD43 /* metrolink.sl3 */,
 				3D3D21F017274C180033CD43 /* InfoPlist.strings */,
 				3D3D21F317274C180033CD43 /* main.m */,
 				3D3D21F517274C180033CD43 /* massTransit-Prefix.pch */,
@@ -240,6 +274,7 @@
 				3D3D21FE17274C180033CD43 /* Default-568h@2x.png in Resources */,
 				3D3D220117274C180033CD43 /* MainStoryboard_iPhone.storyboard in Resources */,
 				3D3D220417274C180033CD43 /* MainStoryboard_iPad.storyboard in Resources */,
+				3D3D222617274CD10033CD43 /* metrolink.sl3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D3D221917274C190033CD43 /* InfoPlist.strings in Resources */,
+				3D3D222717274CD10033CD43 /* metrolink.sl3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +312,12 @@
 			files = (
 				3D3D21F417274C180033CD43 /* main.m in Sources */,
 				3D3D21F817274C180033CD43 /* AppDelegate.m in Sources */,
-				3D3D220717274C180033CD43 /* ViewController.m in Sources */,
+				3D3D222A17274CFB0033CD43 /* MetrolinkDatabase.m in Sources */,
+				3D3D222E17274D710033CD43 /* Route.m in Sources */,
+				3D3D2232172750260033CD43 /* SQLTableViewController.m in Sources */,
+				3D3D2235172752E50033CD43 /* StopsTableViewController.m in Sources */,
+				3D3D22381727555B0033CD43 /* Trip.m in Sources */,
+				3D3D223B172759810033CD43 /* StopNameAndStopTime.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D3D221C17274C190033CD43 /* massTransitTests.m in Sources */,
+				3D3D222F17274D710033CD43 /* Route.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +509,7 @@
 				3D3D222117274C190033CD43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D3D222217274C190033CD43 /* Build configuration list for PBXNativeTarget "massTransitTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +518,7 @@
 				3D3D222417274C190033CD43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

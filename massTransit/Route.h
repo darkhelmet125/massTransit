@@ -9,5 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface Route : NSObject
+@property NSString* route_id;
+@property NSString* route_long_name;
 
+-(id)initWithRouteID:(NSString*)route andRouteLongName:(NSString*)routeLongName;
 @end

@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StopNameAndStopTime.h"
+#import "Route.h"
+#import "MetrolinkDatabase.h"
 
 @interface StopsTableViewController : UITableViewController
-
+@property (nonatomic, retain) NSArray* stops;
+@property NSString* routeID;
 @end

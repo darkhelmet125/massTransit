@@ -7,14 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Location.h"
-#import "CitiesDatabase.h"
+#import "Route.h"
+#import "MetrolinkDatabase.h"
 
 @interface SQLTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
-{
-  NSArray* _locations;
-}
 
-@property (nonatomic, retain) NSArray* locations;
+@property (nonatomic, retain) NSArray* routes;
 
 @end

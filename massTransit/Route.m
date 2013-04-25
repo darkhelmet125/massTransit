@@ -9,5 +9,16 @@
 #import "Route.h"
 
 @implementation Route
-
+@synthesize route_id;
+@synthesize route_long_name;
+-(id)initWithRouteID:(NSString*)route andRouteLongName:(NSString*)routeLongName
+{
+    self = [super init];
+    if(self)
+    {
+        route_id = route;
+        route_long_name = routeLongName;
+    }
+    return self;
+}
 @end
