@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  StopsTableViewController.h
 //  massTransit
 //
 //  Created by William Short on 4/23/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface StopsTableViewController : UITableViewController
 
 @end
